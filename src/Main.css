@@ -141,3 +141,6 @@ line-height:50px;
 .blog-content p{
   margin:10px;
 }
+.item-wrap{
+  flex-grow:1;
+}
