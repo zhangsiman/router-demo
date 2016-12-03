@@ -18,7 +18,7 @@ class Finish extends React.Component {
       </Paper>
         <div className="show-git">
           <p>Fllowers<br/>{this.props.data.followers+100}</p>
-          <p>following<br/>{this.props.data.followig+100}</p>
+          <p>following<br/>{this.props.data.following+100}</p>
           <p>public_repos<br/>{this.props.data.public_repos}</p>
         </div>
       </div>

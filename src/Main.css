@@ -15,6 +15,7 @@ button:focus,button:active,button:visited{
   display: flex;
   justify-content: space-around;
   align-items: center;
+
 }
 .nav-footer a{
   color:#90A4AE;
@@ -51,7 +52,7 @@ button:focus,button:active,button:visited{
 }
 .main{
   flex-grow: 1;
-
+  overflow-y: scroll;
   display: flex;
 }
 .home-wrap{
@@ -102,5 +103,41 @@ button:focus,button:active,button:visited{
   color:#000;
   font-size: 16px;
   padding:10px 0;
-  
+
+}
+.blog-wrap{
+  flex-grow: 1;
+  margin-top:20px;
+}
+.blog-card{
+  padding: 0px 10px;
+  max-width:800px;
+  margin-bottom:20px;
+}
+.blog-index{
+  background-color:#D1C4E9;
+  font-size:24px;
+  text-align: center;
+  height:60px;
+  color:#fff;
+  padding-top:5px;
+}
+.blog-index span{
+border-radius:50%;
+border:2px solid #fff;
+display: inline-block;
+width:50px;
+height:50px;
+line-height:50px;
+}
+.blog-content{
+  box-shadow:2px 3px 6px #ccc;
+  padding: 10px;
+  color:#666;
+}
+.blog-content h3{
+  margin:0 10px;
+}
+.blog-content p{
+  margin:10px;
 }
