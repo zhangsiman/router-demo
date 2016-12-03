@@ -14,7 +14,7 @@ class NavHeader extends React.Component {
     }
   }
   handleClick(){
-    this.context.router.push('/');
+    this.context.router.goBack();//要是想直接返回home 页面的话就用.push('/')
   }
   handleMa(){
       this.setState({

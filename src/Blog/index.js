@@ -1,19 +1,25 @@
 import React, { PropTypes } from 'react';
-import BlogCard from '../component/BlogCard'
-
-let data=[
-  {index:1,title:'hello',desc:'one'},
-  {index:2,title:'hi',desc:'two'},
-  {index:3,title:'how',desc:'three'},
-  {index:4,title:'nice',desc:'four'}
-]
+import BlogCard from '../component/BlogCard';
+import axios from 'axios';
+import Loading from '../component/Loading'
 
 class Blog extends React.Component {
+  constructor(){
+    super();
+    this.state={
+      data:[],
+      wait:true
+    }
+  }
+  componentDidMount(){
+    axios.get('https://raw.githubusercontent.com/zhangsiman/router-demo/master/data/BlogCard.json ')
+          .then(res => this.setState({data:res.data,wait:false}) )
+  }
   render () {
-    let cards=data.map((item,i) => <BlogCard key={i} {...item} />)
+
     return(
       <div className='blog-wrap'>
-          {cards}
+        {this.state.wait ? <Loading /> : this.state.data.map((item,i) => <BlogCard key={i} {...item} />)}
       </div>
     )
   }

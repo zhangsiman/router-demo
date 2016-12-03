@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Link from 'react-router'
 
 class BlogCard extends React.Component {
   render () {
@@ -11,7 +12,7 @@ class BlogCard extends React.Component {
               <h3>{this.props.title}</h3>
               <p>{this.props.desc}</p>
               <MuiThemeProvider>
-              <RaisedButton label="阅读更多" labelColor='#757575'/>
+              <RaisedButton label="阅读更多" labelColor='#757575' href={`#/item/${this.props.url}`} />
               </MuiThemeProvider>
             </div>
           </div>
