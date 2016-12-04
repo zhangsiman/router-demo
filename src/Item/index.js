@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react';
 import marked from "marked";
 import axios from "axios";
-import Loading from "../component/Loading"
+import Loading from "../component/Loading";
+import highlight from 'highlight.js'
 
 // 就是为了把md格式转换为html格式
 class Item extends React.Component {
@@ -18,10 +19,15 @@ class Item extends React.Component {
             .catch(err=>alert(err))
     }
     render () {
+      marked.setOptions({
+        highlight: function (code) {
+          return highlight.highlightAuto(code).value;
+        }
+      });
     return(
       <div className='item-wrap'>
         {this.state.data.length==0 ? <Loading /> :
-        <div dangerouslySetInnerHTML={{__html:marked(this.state.data)}}></div>}
+        <div className="post-wrap" dangerouslySetInnerHTML={{__html:marked(this.state.data)}}></div>}
       </div>
     )
 

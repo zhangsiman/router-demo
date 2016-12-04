@@ -2,11 +2,40 @@ button:focus,button:active,button:visited{
   outline: none;
 }
 
-
 .my-wrap{
   display:flex;
   flex-direction: column;
   height:100vh;
+}
+/*打断点开始*/
+@media(min-width:700px){
+  .my-wrap{
+    flex-direction: row;
+  }
+}
+/*打断点结束*/
+
+.leftnav-wrap{
+  width:200px;
+  background-color: #B39DDB;
+  color:#fff;
+  text-align: center;
+  padding-top:10px;
+}
+.leftnav-wrap h3{
+  font-weight: bold;
+}
+.leftnav-wrap a{
+  display: block;
+  padding: 20px;
+  color:#fff;
+  font-size:24px;
+}
+.leftnav-wrap span{
+  font-size: 20px;
+}
+.leftnav-wrap a:hover{
+  text-decoration: none;
 }
 .nav-footer{
   flex-shrink:0;
