@@ -51,11 +51,9 @@ setNavBar(){
       <div className="my-wrap">
 
           {this.state.showLeftNav ? <LeftNav title={this.state.title}/> :  <NavHeader title={this.state.title}/>}
-
-          <div className="main">
-            {this.props.children}
-          </div>
-
+            <div className="main">
+              {this.props.children}
+            </div>
           {this.state.showLeftNav ? null : <NavFooter />}
 
       </div>

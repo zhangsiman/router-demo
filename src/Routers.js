@@ -22,7 +22,6 @@ class Routers extends React.Component {
                 <Route path="about" component={About} />
                 <Route path='item/:title' component={Item} />
                 <Route path="*" component={NoMatch}　/>
-
               </Route>
           </Router>
         </div>
