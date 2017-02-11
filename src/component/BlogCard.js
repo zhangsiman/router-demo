@@ -12,7 +12,7 @@ class BlogCard extends React.Component {
               <h3>{this.props.title}</h3>
               <p>{this.props.desc}</p>
               <MuiThemeProvider>
-              <RaisedButton label="阅读更多" labelColor='#757575' href={`#/item/${this.props.url}`} />
+              <RaisedButton label="read more" labelColor='#757575' href={`#/item/${this.props.url}`} />
               </MuiThemeProvider>
             </div>
           </div>
